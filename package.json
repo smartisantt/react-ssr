@@ -1,0 +1,12 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:start":"nodemon --watch src --exec node ./src/server"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
