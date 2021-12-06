@@ -15,8 +15,9 @@ export default  (req, res) => {
       <title>react ssr</title>
   </head>
   <body>
-      <div id="app">${componentHTML}</div>
+      <div id="root">${componentHTML}</div>
   </body>
+  <script src="./js/bundle.js"></script>
   </html>
       `;
   res.send(html);
