@@ -10,7 +10,24 @@ const serverConfig = {
     path: path.resolve(__dirname, './dist'),
   },
   target: 'node',
-  // externals: [nodeExternals()],
+  externals: [nodeExternals()],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'isomorphic-style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: false,
+              modules: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
 
 module.exports = merge(baseConfig, serverConfig);

@@ -1,8 +1,9 @@
 const path = require('path');
- 
+
+
 module.exports = {
   mode: 'development',
-  watch:true,
+  watch: true,
   module: {
     rules: [
       {
@@ -18,4 +19,5 @@ module.exports = {
     },
     extensions: ['.js', '.jsx', '.css'],
   },
+ 
 };
