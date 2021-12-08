@@ -3,3 +3,9 @@
     color: #fff;
     border-radius: 4px;
 }
+
+.bg{
+    background: url("@/assets/test.png");
+    width: 300px;
+    height: 300px;
+}

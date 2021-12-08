@@ -10,6 +10,8 @@ const clientConfig = {
   output: {
     filename: 'js/bundle.[hash:5].js',
     path: path.resolve(__dirname, './public'),
+    assetModuleFilename: 'img/[name].[hash:5][ext]',
+    publicPath:"/"
   },
   module: {
     rules: [
@@ -24,6 +26,10 @@ const clientConfig = {
             },
           },
         ],
+      },
+      {
+        test: /\.(gif|png|webp|svg|jpg|jpeg|bmp)$/,
+        type: 'asset/resource',
       },
     ],
   },

@@ -8,6 +8,8 @@ const serverConfig = {
   output: {
     filename: 'server.js',
     path: path.resolve(__dirname, './dist'),
+    assetModuleFilename: 'img/[name].[hash:5][ext]',
+    publicPath:"/"
   },
   target: 'node',
   externals: [nodeExternals()],
@@ -25,6 +27,10 @@ const serverConfig = {
             },
           },
         ],
+      },
+      {
+        test: /\.(gif|png|webp|svg|jpg|jpeg|bmp)$/,
+        type: 'asset/resource',
       },
     ],
   },
