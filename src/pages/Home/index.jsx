@@ -4,7 +4,7 @@ import imgPng from '@/assets/test.png'
 
 console.log(styles);
 
-export default function () {
+export default function Home() {
   const [number, setNumber] = useState(0);
   return (
     <div>
