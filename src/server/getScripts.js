@@ -4,6 +4,6 @@ export default function () {
   const res = fs
     .readdirSync('./public/js')
     .filter((file) => file.endsWith('.js'))
-    .map((file) => `<script src="./js/${file}"></script>`);
+    .map((file) => `<script src="/js/${file}"></script>`);
   return res.join('\n');
 }

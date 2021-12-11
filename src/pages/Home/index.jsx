@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './index.css';
 import imgPng from '@/assets/test.png'
 
-console.log(styles);
 
 export default function Home() {
   const [number, setNumber] = useState(0);
