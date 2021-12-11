@@ -7,8 +7,8 @@ export default function Header() {
     <div className={styles.header}>
       <Link to='/'>首页</Link>
       <Link to='/admin'>后台</Link>
-      <Link to='/front/news'>新闻</Link>
-      <Link to='/front/about'>关于</Link>
+      <Link to='/news'>新闻</Link>
+      <Link to='/about'>关于</Link>
     </div>
   );
 }

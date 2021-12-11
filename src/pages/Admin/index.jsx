@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import renderRoutes from '../../routes/renderRoutes'
+import { Link, Outlet } from 'react-router-dom';
 
-export default function Admin({ route }) {
+export default function Admin() {
   return (
     <div>
       <h1>后台页面</h1>
@@ -12,8 +11,8 @@ export default function Admin({ route }) {
           系统管理
         </Link>
       </nav>
-      {renderRoutes(route.routes)}
+      <Outlet />
     </div>
   );
 }
-ƒ;
+

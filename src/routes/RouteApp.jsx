@@ -3,5 +3,6 @@ import { useRoutes } from 'react-router-dom';
 import routeConfig from './routeConfig';
 
 export default function RouteApp() {
-  return <div>{useRoutes(routeConfig)}</div>;
+  let element = useRoutes(routeConfig)
+  return <div>{element}</div>;
 }
