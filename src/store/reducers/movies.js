@@ -1,4 +1,4 @@
-import { actionTypes } from '../actions/movie';
+import { actionTypes } from '../actions/movies';
 
 export default function (state = [], { type, payload }) {
   switch (type) {
