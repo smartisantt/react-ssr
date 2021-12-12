@@ -1,10 +1,16 @@
 import React from 'react';
-import '../assets/global.css'
-import {BrowserRouter as Router} from 'react-router-dom'
+import '../assets/global.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import RouteApp from '../routes/RouteApp';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 export default function App() {
-  return <Router>
-    <RouteApp />
-  </Router>;
+  return (
+    <Provider store={store}>
+      <Router>
+        <RouteApp />
+      </Router>
+    </Provider>
+  );
 }

@@ -1,23 +1,36 @@
-import React, { useState } from 'react';
-import styles from './index.css';
-import imgPng from '@/assets/test.png'
+import React from 'react';
+import { connect } from 'react-redux';
+import { increase, decrease } from '../../store/actions/counter';
 
-
-export default function Home() {
-  const [number, setNumber] = useState(0);
+function Home({ number, onIncrease, onDecrease }) {
   return (
     <div>
-      <h1>首页 : {number}</h1>
-      <div className={styles.bg}></div>
-      <img src={imgPng} alt="" />
-      <button
-        className={styles.button}
-        onClick={() => {
-          setNumber(number + 1);
-        }}
-      >
-        点击
-      </button>
+      <h1>首页</h1>
+
+      <p>
+        <button onClick={onDecrease}>减</button>
+        <strong>{number}</strong>
+        <button onClick={onIncrease}>加</button>
+      </p>
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    number: state.counter,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onIncrease() {
+      dispatch(increase());
+    },
+    onDecrease() {
+      dispatch(decrease());
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

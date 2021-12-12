@@ -13,7 +13,9 @@
     "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.0.2"
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "redux": "^4.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -25,6 +27,7 @@
     "mini-css-extract-plugin": "^2.4.5",
     "npm-run-all": "^4.1.5",
     "react-router-config": "^5.1.1",
+    "redux-devtools-extension": "^2.13.9",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
     "webpack-merge": "^5.8.0",
